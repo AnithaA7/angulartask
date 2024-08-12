@@ -1,0 +1,43 @@
+<div class="container mt-3">
+  <h3 class="bg-secondary">USER DATA</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3 mt-3">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="formData.name" required class="form-control">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="formData.email" required class="form-control">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="message" class="form-label">Message:</label>
+      <textarea id="message" name="message" [(ngModel)]="formData.message" required class="form-control"></textarea>
+    </div>
+    <input type="hidden" id="id" name="id" [(ngModel)]="formData.id">
+    <button type="submit" class="btn btn-success rounded-pill" (click)=postData()>Submit</button>
+  </form>
+</div>
+
+<div class="container-fluid mt-3">
+  <table *ngIf="allData.length > 0" class="table table-bordered table-sm">
+    <thead class="bg-secondary">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of allData">
+        <td>{{ data.name }}</td>
+        <td>{{ data.email }}</td>
+        <td>{{ data.message }}</td>
+        <td>
+          <button (click)="editData(data)" class="btn btn-success rounded-pill">Edit</button>
+          <button (click)="deleteData(data._id)" class="btn btn-danger rounded-pill">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

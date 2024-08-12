@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+     <h2>Parent to Child</h2>   
+    <app-child [name]="name"   [result]="add()" operation="Addition"  [result1]="sub()" 
+     operation1="Subtraction"  [result2]="mul()" operation2="Multiplication"  [result3]="div()"
+      operation3="Division" (nametoparent)="NAME($event)" ></app-child>
+
+
+
+    <!-- <app-child [result]="add()" operation="Addition"></app-child>
+    <app-child [result]="sub()"  operation="Subtraction"></app-child>
+    <app-child [result]="mul()" operation="Multiplication"></app-child>
+    <app-child  [result]="div()" operation="Division"></app-child> -->
+
+    <h2>Child to Parent</h2>
+    <app-child  (nametoparent)="NAME($event)" ></app-child>
+
+    DisplayName={{displayname}}
+
+    <h3>Create a function and send message by using @output</h3>
+
+    <app-child  (smessage)="messageresult($event)"></app-child>
+    sendmessage= {{ receivemessage }}
+
+
+      <app-child (childmessage)="dname($event)"></app-child>
+     Message= {{msg}}
+   
+<app-child [count]="Counter" (countChanged)="countChangedHandler($event)"></app-child>
+
+<app-child (newItemEvent)="addItem($event)"></app-child>
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+</body>
+</html>

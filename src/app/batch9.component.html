@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Hello Batch-9</h2>
+        <h5>Add,Sub,Mul,Div Two numbers</h5>
+
+        <p>The sum is: {{ firstnumber + secondnumber }}</p> 
+        <p>The Sub is: {{ firstnumber - secondnumber }}</p> 
+        <p>The Mul is: {{ firstnumber * secondnumber }}</p> 
+        <p>The div is: {{ firstnumber / secondnumber }}</p>
+
+        <h2>Json file</h2>
+
+        <div *ngFor="let AA of Vegitables; index as i">
+            <div [ngSwitch]="AA.Rate">
+                <div *ngSwitchCase="100" [ngStyle]="{'text-decoration': 'line-through'}">
+                    {{i}} - {{AA.VegName}} <br>
+                    {{i}} - color = {{AA.color}}
+                </div>
+            </div>
+            <div [ngClass]="{ 'apple': AA.color }"></div>
+            {{i}} - {{AA.VegName}} - {{AA.color}}
+        </div>
+
+        <h6>Compare two functions</h6>
+
+        <div *ngIf="c() === f(); then tr ; else fa">
+            
+        </div>
+        <ng-template #tr>{{result}} True</ng-template>
+
+        <ng-template #fa>{{results}} False</ng-template>
+<hr>
+<button [class.active]="isActive" > Active</button>       
+        
+<h3>Angular Pipes or Build in pipes</h3>
+{{title}} 
+<br><br>
+{{toDate}}
+
+<h2>using Angular pipes or  build in pipes</h2>
+{{toDate | date }}
+<br><br>
+{{toDate | date :'short'}}
+<br><br>
+{{toDate | date :'fullDate'}}<br><br>
+<h2>Chaining Pipe</h2>
+{{toDate | date | uppercase}}<br><br>
+
+{{title|slice:0:5}}<br><br>
+{{num|number:'6.2-4'}}<br><br>
+{{per|percent:'4.4-6'}}<br><br>
+{{cur|currency:'INR'}}<br>
+<!-- {{per|selectpipe}} -->
+
+<hr>
+<h2>Date common format strings</h2>
+
+Year : {{fDate | date :'y'}}<br><br>
+Year : {{fDate | date :'yy'}}<br><br>
+Month : {{fDate | date :'M'}}<br><br>
+Month : {{fDate | date :'M'}}<br><br>
+Month : {{fDate | date :'MMM'}}<br><br>
+Month : {{fDate | date :'MMMM'}}<br><br>
+Day : {{fDate | date : 'd'}}<br><br>
+Day : {{fDate | date : 'dd'}}<br><br>
+Hour : {{fDate | date : 'j'}}<br><br>
+Hour : {{fDate | date : 'jj'}}<br><br>
+Hour : {{fDate | date : 'h'}}<br><br>
+Hour : {{fDate | date : 'hh'}}<br><br>
+Hour24 : {{fDate | date : 'H'}}<br><br>
+Hour24 : {{fDate | date : 'HH'}}<br><br>
+Minute : {{fDate | date : 'm'}}<br><br>
+Minute : {{fDate | date : 'mm'}}<br><br>
+Second : {{fDate | date : 's'}}<br><br>
+Second : {{fDate | date : 'ss'}}<br><br>
+Time zone : {{fDate | date : 'z'}}<br><br>
+Time zone : {{fDate | date : 'Z'}}<br><br>
+Time zone : {{fDate | date : 'a'}}<br><br>
+Era : {{fDate | date : 'G'}}<br><br>
+Era : {{fDate | date : 'GGGG'}}<br><br>
+<hr>
+<h2>predefined Commonly used formats</h2>
+
+medium : {{fDate | date : 'medium'}}<br><br>
+short : {{fDate | date : 'short'}}<br><br>
+fullDate : {{fDate | date : 'fullDate'}}<br><br>
+longDate : {{fDate | date : 'longDate'}}<br><br>
+mediumDate : {{fDate | date : 'mediumDate'}}<br><br>
+shortDate : {{fDate | date : 'shortDate'}}<br><br>
+mediumTime : {{fDate | date : 'mediumTime'}}<br><br>
+shortTime : {{fDate | date : 'shortTime'}}
+<hr>
+<hr>
+<h3>Create a Masala Array and show the output in list and table form</h3>
+
+<ul>
+    <li *ngFor="let item of masala">{{ item }}</li>
+</ul>
+<h3>Table format</h3>
+
+<table border="1" style="text-align: center;">
+      <tr>
+        <th>Index</th>
+        <th>Masala Items</th>
+      </tr>
+      <tr *ngFor="let item of masala; let i = index ">
+        <td>{{ i }}</td>
+        <td>{{ item }}</td>
+      </tr>
+  </table>
+
+   <h3>Find the Area of Rectangle </h3>
+
+<!--     
+   Length: <input type="number" [(ngModel)]="length">
+   Width: <input type="number" [(ngModel)]="width">
+   {{length | selectpipe : width}}  -->
+
+   <h3>Find the radius of circle</h3>
+   Radius: <input type="number" [(ngModel)]="area">
+    {{ area | selectpipe}}
+
+   <h2>create a chocolate array and literal the array answers using custom pipes</h2>
+
+   {{chocolates }}
+<hr>
+<!-- <h3>Find the biggest number</h3>
+{{fnumber | selectpipe : snumber}} -->
+
+<!-- <h3>pure pipes</h3>
+{{user | purepipe}}<br><br>-->
+<h2>Student JSON file</h2>
+{{Students}}
+<div *ngFor="let cs of Students; index as o">
+    <div [ngSwitch]="cs.mark">
+        <div *ngSwitchCase="90" [ngStyle]="{'text-decoration': 'line-through'}">
+            {{o}} - {{cs.student1}} <br>
+            {{o}} - gen = {{cs.gen}}
+        </div>
+    </div>
+    <div [ngClass]="{ 'app': cs.gen }"></div>
+    {{o}} - {{cs.student1}} - {{cs.gen}}
+</div>
+</body>
+</html>

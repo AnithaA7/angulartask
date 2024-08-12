@@ -1,0 +1,73 @@
+<div class="container">
+  <h3 style="  color: white;
+  font-weight: bold; text-align: center;
+  vertical-align: bottom;
+  background-color: lightskyblue;
+  height: 40px;
+  padding-top: 5px;">
+  My First Template Driven Form - "User Details !!! "
+</h3>
+  <form [formGroup]="userForm">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" formControlName="firstname" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname" formControlName="lastname" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" formControlName="email" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label>Gender:</label>
+          <div>
+            <input type="radio" value="male" name="gender" formControlName="gender">
+            <label>Male</label>
+            <input type="radio" value="female" name="gender" formControlName="gender">
+            <label>Female</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="check">Married</label>
+          <input type="checkbox" id="check" name="married" formControlName="isMarried">
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+      <div class="col-sm-5">
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select id="country" name="country" formControlName="country" class="form-control">
+            <option *ngFor="let c of countryList" [ngValue]="c">{{c.countryname}}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" formControlName="city" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="street">Street</label>
+          <input type="text" id="street" name="street" formControlName="street" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="pin">PinCode</label>
+          <input type="text" id="pin" name="pincode" formControlName="pincode" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <button type="submit" class="btn btn-info">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+<p>tdform works!</p>
+<div class="login-container ">
+    <h2 class="text-center text-success">Login</h2>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <div class="form-group form-floating">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter the username" name="username" ngModel required>
+       
+    </div>
+      <div class="form-group form-floating">
+        <label for="password ">Password:</label>  
+        <input type="password" class="form-control" id="password" placeholder="Enter the password" name="password" ngModel required>
+       
+    </div>
+
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+    </form>
+    <div *ngIf="submitted && !loginForm.valid" class="error-message">
+      Please enter valid username and password.
+    </div>
+  </div>
+  

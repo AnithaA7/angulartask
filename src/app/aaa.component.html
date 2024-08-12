@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>Hello Batch-9</h2>
+        <h1>Welcome to Angular</h1>
+
+
+        <hr><hr>
+        <p class="text-primary h1">Anitha Alagar</p>
+        <h4 id="content">Good Morning Batch-9</h4>
+
+       <br>
+       <br>
+       <h1>string Interpolation</h1>
+       {{name}}
+       <br>
+       {{age}}
+        <br>
+        <br>
+        
+       <h5>Property Binding</h5>
+
+       <button class="btn btn-primary" [disabled]="dd" >Click</button>
+       
+       <h5>Event Binding</h5>
+        <button class="btn btn-success" (click)="show()">Click</button>
+        {{times}}
+
+        <h5>Event Binding</h5>
+        <button  (click)="showname()">Click</button>
+        <div *ngIf="showName">{{name}}</div>
+
+         <h2>Template Reference Variable</h2>
+        <input #el (input)="handleInput1(el)">
+        <p>You have entered {{val}}</p>
+
+        <h1>Two-way Binding Example</h1>
+        <input type="text" [(ngModel)]="message">
+        <p>{{ message }}</p>  
+        
+        <h1>Odd or Even function using ngIf</h1> 
+
+        <div *ngIf="numbers % 2 === 0; else oddNumber">
+            <p>{{ numbers }} is even.</p>
+          </div>
+          <ng-template #oddNumber>
+            <p>{{ numbers }} is odd.</p>
+          </ng-template>
+
+          <h2>Basic Mathematics</h2>
+          <div *ngIf="value === 'add'">The Addition is = {{add()}}</div>
+          <div *ngIf="values === 'sub'">The Subtraction is = {{sub()}}</div>
+          <div *ngIf="valu === 'mul'">The Multiplication is = {{mul()}}</div>
+          <div *ngIf="vals === 'div'">The Division is = {{div()}}</div>
+          
+          <!-- <div>
+            <p>{{student.name1}}</p>
+          </div> -->
+
+          <h1>Create a Array of Object</h1> 
+
+          <div *ngFor="let ani of chocolate; index as a ; even as b ; odd as c ; first as d ; last as e">
+                {{a}} - {{ani.name}} {{a}} - {{ani.color}} {{b}} - {{ani.name}} {{c}} - {{ani.color1}} {{d}}
+          </div>
+          <h2>Find the biggest number</h2>
+          <div *ngIf="number1 >= number2 && number1 >= number3">
+            {{ number1 }} is the biggest number.
+          </div>
+          <div *ngIf="number2 >= number1 && number2 >= number3">
+            {{ number2 }} is the biggest number.
+          </div>
+          <div *ngIf="number3 >= number1 && number3 >= number2">
+            {{ number3 }} is the biggest number.
+          </div>
+
+          <h2>High or Low classwork</h2>
+         
+            <div *ngIf="88 < 9 ; then ib; else id"></div>
+
+            <ng-template #ib>High</ng-template>
+            <ng-template #id>Low</ng-template>
+          <h1>create student array  of object </h1>
+          <div *ngFor="let aaa of students; index as a1 ; even as b1;first as c1">
+            {{a1}} - {{aaa.Name}} {{a1}} - {{aaa.Rollno}} {{c1}} - {{aaa.Gender}} 
+      </div>  
+
+      <h1>Create a  Array</h1>
+      <div *ngFor="let bbb of players; index as aa ; even as bb ;  odd as cc ; first as dd">
+       {{aa}} -{{bb}} - {{cc}} - {{dd}} - {{players}} 
+  </div>  
+
+
+<!-- <input type="text" [value]="name" (input)="name=$event.target.value">
+<p> You entered {{names}}</p>
+<button (click)="clearName()">Clear</button> -->
+      
+    </body>
+</html>

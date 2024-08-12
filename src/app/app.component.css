@@ -1,0 +1,23 @@
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+th{
+    background-color:  darkgrey;
+}
+td{
+    background-color: wheat;
+}
+table{
+    height: 550px;
+    width: 1300px;
+}
+
+img{
+  height: 100px;
+  width:100px;
+}
+
+
+

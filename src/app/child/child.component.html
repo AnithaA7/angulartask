@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- <h3>Display the Name Parent to Child</h3> -->
+        {{name}}
+        
+
+
+        <!-- <h2>Basic arithmetic operation</h2> -->
+        <h2>{{ operation }}</h2>
+        <p>The Result is : {{result}}</p>
+        <h2>{{ operation1 }}</h2>
+        <p>The Result is : {{result1}}</p>
+        <h2>{{ operation2 }}</h2>
+        <p>The Result is : {{result2}}</p>
+        <h2>{{ operation3 }}</h2>
+        <p>The Result is : {{result3}}</p>
+
+      
+        <button (click)="sendName()">Click</button>
+
+
+        
+        <!-- <h3>Create a function and send message by using @output</h3> -->
+        <button (click)="sendmessage()">Click</button>
+
+       <button (click)="showmessage()">Click</button>
+
+
+       <button (click)="increment()">Increment</button>
+       <button (click)="decrement()">Decrement</button>
+        current count is {{count}}
+     
+        <input type="text" #newItem>
+        <button type="button" (click)="addNewItem(newItem.value)">Add to parent's list</button>
+    </body>
+
+</html>

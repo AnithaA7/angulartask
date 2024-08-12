@@ -1,0 +1,60 @@
+<form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname" [(ngModel)]="contact.firstname" required minlength="2">
+      <div *ngIf="contactForm.controls['firstname'].touched && contactForm.controls['firstname'].errors?.['required']">
+        First Name is required
+      </div>
+      <div *ngIf="contactForm.controls['firstname'].touched && contactForm.controls['firstname'].errors?.['minlength']">
+        First Name Minimum Length is 2
+      </div>
+    </div>
+  
+    <div>
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname" [(ngModel)]="contact.lastname" required maxlength="10" pattern="[a-zA-Z]+">
+      <div *ngIf="contactForm.controls['lastname'].touched && contactForm.controls['lastname'].errors?.['required']">
+        Last Name is required
+      </div>
+      <div *ngIf="contactForm.controls['lastname'].touched && contactForm.controls['lastname'].errors?.['maxlength']">
+        Last Name Maximum Length is 10
+      </div>
+      <div *ngIf="contactForm.controls['lastname'].touched && contactForm.controls['lastname'].errors?.['pattern']">
+        Last Name Pattern is invalid
+      </div>
+    </div>
+  
+    <div>
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" [(ngModel)]="contact.gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <div *ngIf="contactForm.controls['gender'].touched && contactForm.controls['gender'].errors?.['required']">
+        Gender is required
+      </div>
+    </div>
+  
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="contact.email" required email>
+      <div *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].errors?.['required']">
+        Email is required
+      </div>
+      <div *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].errors?.['email']">
+        Email is invalid
+      </div>
+    </div>
+  
+    <div>
+      <label for="isToc">Terms of Service:</label>
+      <input type="checkbox" id="isToc" name="isToc" [(ngModel)]="contact.isToc" required>
+      <div *ngIf="contactForm.controls['isToc'].touched && contactForm.controls['isToc'].errors?.['required']">
+        You must accept the Terms of Service
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+
+  
+  </form>

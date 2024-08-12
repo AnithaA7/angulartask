@@ -1,0 +1,22 @@
+<p>lifehookthree works!</p>
+
+
+<div *ngIf="showTextbox">
+    <!-- Content to be shown -->
+    <input type="text" [(ngModel)]="inputText">
+  </div>
+  <button (click)="toggleTextbox()">Toggle Textbox</button>
+
+<p>{{ message }}</p>
+    <button (click)="changeMessage()">Change Message</button>
+
+    <!-- <h2>Object Information</h2>
+    
+   Name: {{ Name }}
+
+   Age: {{ Age }} -->
+
+<app-childapple>
+    <span #contentwrapper>Hi I am AnithaAlagar</span>
+   
+</app-childapple>

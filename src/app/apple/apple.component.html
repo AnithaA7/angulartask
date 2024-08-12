@@ -1,0 +1,11 @@
+
+
+<button (click)="changeData()">Change Data</button>
+<app-childapple [parentData]="parentData" ></app-childapple>
+
+
+<p>send message parent to child using ngonchanges</p>
+
+<input type="text" [(ngModel)]="sendmessage" placeholder="Enter Data">
+
+<app-childapple [receivemessage]="sendmessage"></app-childapple>

@@ -1,0 +1,251 @@
+
+  <!-- <div class="container">
+    <h3 style="  color: white;
+    font-weight: bold; text-align: center;
+    vertical-align: bottom;
+    background-color: lightskyblue;
+    height: 40px;
+    padding-top: 5px;">
+    My First Template Driven Form - "User Details !!! "
+  </h3>
+  
+  
+  <br><br>
+    <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" ngModel class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" ngModel class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" ngModel class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label>Gender:</label>
+            <div>
+              <input type="radio" value="male" name="gender" ngModel>
+              <label>Male</label>
+              <input type="radio" value="female" name="gender" ngModel>
+              <label>Female</label>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="check">Married</label>
+            <input type="checkbox" id="check" name="married" ngModel>
+          </div>
+        </div>
+  <div class="col-sm-2"></div>
+        <div class="col-sm-5">
+          <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" name="country" ngModel class="form-control">
+              <option *ngFor="let c of countryList" [ngValue]="c">{{c.countryname}}</option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" ngModel class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street" ngModel class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="pin">PinCode</label>
+            <input type="text" id="pin" name="pincode" ngModel class="form-control">
+          </div>
+         
+          <div class="form-group">
+            <button type="submit" class="btn btn-info">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div> -->
+
+  
+
+
+
+
+  <br><br><br>
+
+  
+
+ <!-- <div class="container">
+    <h3 style="  color: white;
+    font-weight: bold; text-align: center;
+    vertical-align: bottom;
+    background-color: lightskyblue;
+    height: 40px;
+    padding-top: 5px;">
+    My First Template Driven Form - "User Details !!! "
+  </h3>
+  
+  
+  <br><br>
+    <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" ngModel class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" ngModel class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" ngModel class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label>Gender:</label>
+            <div>
+              <input type="radio" value="male" name="gender" ngModel>
+              <label>Male</label>
+              <input type="radio" value="female" name="gender" ngModel>
+              <label>Female</label>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="check">Married</label>
+            <input type="checkbox" id="check" name="married" ngModel>
+          </div>
+        </div>
+  <div class="col-sm-2"></div>
+        <div class="col-sm-5">
+          <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" name="country" ngModel class="form-control">
+              <option *ngFor="let c of countryList" >{{countryList}}</option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" ngModel class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street" ngModel class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="pin">PinCode</label>
+            <input type="text" id="pin" name="pincode" ngModel class="form-control">
+          </div>
+         
+          <div class="form-group">
+            <button type="submit" class="btn btn-info">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div> 
+   -->
+
+
+   <!-- <h3>Create a TDF Form add the scrollbar using object</h3>
+
+   <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
+    <label for="firstName">First Name</label>
+    <input type="text" name="firstName" ngModel>
+    
+    <label for="lastName">Last Name</label>
+    <input type="text" name="lastName" ngModel>
+    
+    <label for="email">Email</label>
+    <input type="email" name="email" ngModel>
+    
+    <label for="country">Country</label>
+    <select name="country" ngModel>
+      <option *ngFor="let country of countryList" [ngValue]="country.name">{{ country.name }}</option>
+    </select>
+    
+    <button type="submit" class="btn btn-info">Submit</button>
+  </form> -->
+  
+<br><br>
+
+<!-- 
+<h2>Create a Tdf form add the scrollbar using array</h2>
+  <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="exp">Work Experience</label>
+      <select id="exp" name="exp" ngModel >
+        <option *ngFor="let exp of experience" [ngValue]="exp">{{exp}}</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-info">Submit</button>  
+  </form> -->
+  
+<!-- 
+
+
+
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+    <p>
+      <label for="firstname">First Name</label>
+      <input type="text" name="firstname" ngModel>
+    </p>
+   
+    <p>
+      <label for="lastname">Last Name</label>
+      <input type="text" name="lastname" ngModel>
+    </p>
+   
+    <p>
+      <label for="email">Email </label>
+      <input type="text" id="email" name="email" ngModel>
+    </p>
+   
+    <p>
+      <label for="gender">Gender</label>
+      <input type="radio" value="male" name="gender" ngModel> Male
+      <input type="radio" value="female" name="gender" ngModel> Female
+    </p>
+   
+    <p>
+      <label for="isMarried">Married</label>
+      <input type="checkbox" name="isMarried" ngModel>
+    </p>
+   
+    <p>
+      <label for="country">Country</label>
+      <select name="country" ngModel>
+        <option [ngValue]="c.id" *ngFor="let c of countryList">{{c.name}}</option>
+      </select>
+    </p>
+   
+    <p>
+      <button type="submit">Submit</button>
+    </p>
+  </form> -->
+  
